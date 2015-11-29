@@ -19,6 +19,11 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider) {
             abstract: true,
             url: "/content",
             templateUrl: "shared/common/content.html",
+            onEnter: ['$state', 'auth', function($state, auth) {
+              if (!auth.isLoggedIn()) {
+                $state.go('login');
+              }
+            }],
         })
         .state('content.home', {
             url: "/home",
@@ -36,7 +41,7 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider) {
             controller: 'AuthCtrl',
             onEnter: ['$state', 'auth', function($state, auth) {
               if (auth.isLoggedIn()) {
-                $state.go('content.analysis');
+                $state.go('content.home');
               }
             }],
             data: { pageTitle: 'Вход в систему', specialClass: 'gray-bg' }
@@ -47,7 +52,7 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider) {
             controller: 'AuthCtrl',
             onEnter: ['$state', 'auth', function($state, auth) {
               if (auth.isLoggedIn()) {
-                $state.go('content.analysis');
+                $state.go('content.home');
               }
             }],
             data: { pageTitle: 'Регистрация', specialClass: 'gray-bg' }

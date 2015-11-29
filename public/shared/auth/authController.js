@@ -10,7 +10,7 @@ angular.module('Auth')
         auth.register($scope.user).error(function(error){
           $scope.error = error;
         }).then(function(){
-          $state.go('content.user');
+          $state.go('content.home');
         });
       };
 
@@ -18,7 +18,7 @@ angular.module('Auth')
         auth.logIn($scope.user).error(function(error){
           $scope.error = error;
         }).then(function(){
-          $state.go('content.analysis');
+          $state.go('content.home');
         });
       };
   }]);
