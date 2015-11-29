@@ -33,12 +33,24 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider) {
         .state('login', {
             url: "/login",
             templateUrl: "shared/auth/loginView.html",
+            controller: 'AuthCtrl',
+            onEnter: ['$state', 'auth', function($state, auth) {
+              if (auth.isLoggedIn()) {
+                $state.go('content.analysis');
+              }
+            }],
             data: { pageTitle: 'Вход в систему', specialClass: 'gray-bg' }
         })
         .state('register', {
             url: "/register",
             templateUrl: "shared/auth/registerView.html",
-            data: { pageTitle: 'Регистрация нового пользователя', specialClass: 'gray-bg' }
+            controller: 'AuthCtrl',
+            onEnter: ['$state', 'auth', function($state, auth) {
+              if (auth.isLoggedIn()) {
+                $state.go('content.analysis');
+              }
+            }],
+            data: { pageTitle: 'Регистрация', specialClass: 'gray-bg' }
         })
 
 
