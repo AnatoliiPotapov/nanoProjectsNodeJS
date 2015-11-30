@@ -1,35 +1,3 @@
 # README #
 
-PCRcloud Это система автоматического анализа результатов REALTIME PCR исследований.
-
-* Quick summary
-
-
-
-* Version
- v 0.01
-
-### How do I get set up? ###
-
-* Summary of set up
-
-* Configuration
-
-* Dependencies
-
-* Database configuration
-
-* How to run tests
-
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+NANO projects - это система визуализации проектов Ульяновского Наноцентра с перспективой обобщения на всю существующую сеть наноценров.
