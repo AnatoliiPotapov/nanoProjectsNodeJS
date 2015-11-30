@@ -3,7 +3,7 @@ var jwt = require('express-jwt');
 var router = express.Router();
 var auth = jwt({secret: 'SECRET', userProperty: 'payload'});
 
-
+var uploadManager = require('./uploadManager')(router);
 
 /* GET home page. */
 router.get('/', function(req, res) {

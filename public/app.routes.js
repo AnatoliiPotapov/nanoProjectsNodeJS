@@ -33,7 +33,19 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider) {
         .state('content.update', {
             url: "/update",
             templateUrl: "components/update/updateView.html",
-            data: { pageTitle: 'Обновление данных проектов' }
+            data: { pageTitle: 'Обновление данных проектов' },
+            resolve: {
+                loadPlugin: function ($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                        {
+                            files: [
+                            'assets/css/plugins/dropzone/basic.css',
+                            'assets/css/plugins/dropzone/dropzone.css',
+                            'assets/js/plugins/dropzone/dropzone.js']
+                        }
+                    ]);
+                }
+            }
         })
         .state('login', {
             url: "/login",
