@@ -9,7 +9,8 @@
         'ui.router',
         'oc.lazyLoad',
         'ui.bootstrap',
-        'Auth'
+        'Auth',
+        'Projects'
     ]);
 
     /**

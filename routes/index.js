@@ -4,6 +4,7 @@ var router = express.Router();
 var auth = jwt({secret: 'SECRET', userProperty: 'payload'});
 
 var uploadManager = require('./uploadManager')(router);
+var projects = require('./projects')(router);
 
 /* GET home page. */
 router.get('/', function(req, res) {

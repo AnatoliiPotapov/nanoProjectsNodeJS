@@ -4,18 +4,23 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+
+var tungus = require('tungus');
 var mongoose = require('mongoose');
+
 var passport = require('passport');
+var multer = require('multer');
 
-mongoose.connect('mongodb://admin:gfslemcopsjfwk8d8w90@ds041563.mongolab.com:41563/ulnano');
-
-//require('./models/Files');
+//mongoose.connect('mongodb://admin:gfslemcopsjfwk8d8w90@ds041563.mongolab.com:41563/ulnano');
+mongoose.connect('tingodb:///' + __dirname + '/data/db');
 
 require('./models/Users');
+require('./models/Projects');
 require('./config/passport');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var projects = require('./routes/projects');
 
 var app = express();
 
@@ -31,7 +36,6 @@ app.use(bodyParser.urlencoded());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(passport.initialize());
-
 
 app.use('/', routes);
 app.use('/users', users);

@@ -41,7 +41,11 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider) {
                             files: [
                             'assets/css/plugins/dropzone/basic.css',
                             'assets/css/plugins/dropzone/dropzone.css',
-                            'assets/js/plugins/dropzone/dropzone.js']
+                            'assets/js/plugins/dropzone/dropzone.js',
+
+                            'assets/css/plugins/datapicker/angular-datapicker.css',
+                            'assets/js/plugins/datapicker/angular-datepicker.js'
+                            ]
                         }
                     ]);
                 }

@@ -34,28 +34,31 @@
     </div>
 </div>
 
-<div class="project-list">
+<div class="project-list" ng-controller="ProjectsFilesListCtrl">
 
 <table class="table table-hover">
 <tbody>
-<tr>
+
+<tr ng-repeat="projects in posts track by $index">
     <td class="project-status">
-        <span class="label label-primary"> Активен </span>
+        <span class="label label-primary"> {{ projects.status }} </span>
     </td>
     <td class="project-title">
-        <a ui-sref="project_detail">Проекты наноценра 0008 </a>
+        <a ui-sref="project_detail"> {{ projects.name }} </a>
         <br/>
-        <small>Создан 14.08.2014</small>
+        <small>Создан {{ projects.dateCreate }}</small>
     </td>
     <td>
-      Актуален на 12.02.2015 10:00 am
+      Актуален на {{ projects.dateActual }}
     </td>
 
     <td class="project-actions">
-        <a href="" class="btn btn-white btn-sm"><i class="fa fa-pencil"></i> Редактировать </a>
-        <a href="" class="btn btn-danger btn-sm"><i class="fa fa-pencil"></i> Удалить </a>
+        <a target="_self" ng-href="/uploaded/files/{{ projects.filename }}" class="btn btn-white btn-sm"><i class="fa fa-pencil"></i> Скачать </a>
+        <a ng-click="delete(projects)" href="" class="btn btn-danger btn-sm"><i class="fa fa-pencil"></i> Удалить </a>
     </td>
 </tr>
+
+
 
 </tbody>
 </table>
