@@ -1,0 +1,137 @@
+.line.parent {
+  vector-effect: non-scaling-stroke;
+  stroke-width: 0.5;
+  stroke: black;
+  fill: none;
+}
+
+.line.partner {
+  vector-effect: non-scaling-stroke;
+  stroke-width: 0.25;
+  stroke: grey;
+  fill: none;
+}
+
+.healthArc.problem {
+  fill: #FF0000;
+}
+
+.healthArc.ok {
+  fill: #FFFF00;
+}
+
+.healthArc.good {
+  fill: #33CC00;
+}
+
+.status.NA {
+    fill: #9DE691;
+}
+
+.status.Всеок {
+    fill:#73ff32;
+    background-color: #73ff32;
+}
+
+.status.Естьпроблемы {
+    fill:red;
+    background-color: red;
+}
+
+.status.Впроработке {
+    fill:black;
+    background-color: black;
+}
+
+.status.Требуетвмешательства {
+    fill:orange;
+    background-color: orange;
+}
+
+.status.Полка {
+    fill:rgb(100, 100, 100);
+    background-color: rgb(100, 100, 100);
+}
+
+.share.UCTT {
+    fill:blue;
+    background-color:blue;
+}
+
+.share.TK {
+    fill:grey;
+    background-color:grey;
+}
+
+.share.partner {
+    fill:white;
+    background-color:white;
+}
+
+
+.money.UCTT {
+    fill:blue;
+    background-color:blue;
+}
+
+.money.TK {
+    fill:grey;
+    background-color:grey;
+}
+
+.money.partner {
+    fill:white;
+    background-color:white;
+}
+
+.capexopex.CAPEX {
+    fill: blue;
+    background-color:blue;
+}
+
+.capexopex.OPEX {
+    fill:white;
+    background-color:white;
+}
+
+
+
+.type.ULNANOTECH {
+    fill: #9DE691;
+    background-color: #9DE691;
+}
+
+.type.ТК {
+    fill:#73ff32;
+    background-color: #73ff32;
+}
+
+.type.Стартап {
+    fill:red;
+    background-color: red;
+}
+
+.type.Инкубатор {
+    fill:red;
+    background-color: red;
+}
+
+.type.Сервиснаякомпания {
+    fill:red;
+    background-color: red;
+}
+
+.type.Внутреннийrd{
+    fill:red;
+    background-color: red;
+}
+
+.type.ЗОКР {
+    fill:red;
+    background-color: red;
+}
+
+.type.Интеллектуальнаясобственность {
+    fill:red;
+    background-color: red;
+}

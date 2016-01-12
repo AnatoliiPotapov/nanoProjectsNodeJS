@@ -1,7 +1,7 @@
 
 var options = {
-  tmpDir: __dirname + '/uploaded/tmp',
-  uploadDir: __dirname + '/uploaded/files',
+  tmpDir: __dirname + '/../public/uploaded/tmp',
+  uploadDir: __dirname + '/../public/uploaded/files',
   uploadUrl: '/uploaded/files/',
   storage: {
     type: 'local'

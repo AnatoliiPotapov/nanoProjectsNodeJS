@@ -46,10 +46,10 @@
     <td class="project-title">
         <a ui-sref="project_detail"> {{ projects.name }} </a>
         <br/>
-        <small>Создан {{ projects.dateCreate }}</small>
+        <small>Создан {{ projects.dateCreate | date:"MM/dd/yyyy"}}</small>
     </td>
     <td>
-      Актуален на {{ projects.dateActual }}
+      Актуален на {{ projects.dateActual | date:"MM/dd/yyyy"}}
     </td>
 
     <td class="project-actions">

@@ -1,4 +1,5 @@
 var mongoose = require('mongoose');
+var Parser = require('../methods/parseXLSX');
 
 var ProjectsSchema = new mongoose.Schema({
 
@@ -7,8 +8,15 @@ var ProjectsSchema = new mongoose.Schema({
     shortDescription: String,
    	dateCreate: Date,
    	dateActual: Date,
-   	filename: String
-   	
+   	filename: String,
+   	json: Object
+
 });
+
+ProjectsSchema.methods.process = function(cb) {
+  Parser.parse('public/uploaded/files/' + this.filename);
+  this.json = Parser.process();
+  this.save(cb);
+};
 
 mongoose.model('Projects', ProjectsSchema);

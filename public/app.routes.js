@@ -27,9 +27,24 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider) {
         })
         .state('content.home', {
             url: "/home",
-            templateUrl: "components/home/homeView.html",
-            data: { pageTitle: 'NANO projects' }
+            templateUrl: "components/vis/index.html",
+            data: { pageTitle: 'NANO projects' },
+            resolve: {
+                loadPlugin: function ($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                        {
+                            files: [
+                            'assets/js/d3/d3.min.js',
+                            'components/vis/js/App.js',
+                            'components/vis/js/Binding.js',
+                            'components/vis/css/project-style.css'
+                            ]
+                        }
+                    ]);
+                }
+            }
         })
+
         .state('content.update', {
             url: "/update",
             templateUrl: "components/update/updateView.html",

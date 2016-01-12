@@ -26,7 +26,10 @@ module.exports = function(router) {
 
 	// return a post
 	router.get('/posts/:post', function(req, res, next) {  
-	    res.json(req.post);
+	    req.post.process(function(err, post){
+		    if (err) { return next(err); }
+		    res.json(post);
+		});
 	});
 
 	// delete a post
@@ -46,9 +49,8 @@ module.exports = function(router) {
 
 	  post.save(function(err, post){
 	    if(err){ console.log(err); return next(err); }
-	    res.json(post);
+	    //res.json(post);
 	  });
-
 	});
 
 	/*
