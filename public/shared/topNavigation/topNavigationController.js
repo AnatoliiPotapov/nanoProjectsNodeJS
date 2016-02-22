@@ -12,4 +12,6 @@ angular.module('inspinia')
         $state.go('login');
       };
 
+      
+
   }]);

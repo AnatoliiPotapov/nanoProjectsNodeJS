@@ -14,14 +14,19 @@
     "express": "~4.13.1",
     "express-jwt": "^3.3.0",
     "jsonwebtoken": "^5.4.1",
+    "lwip": "0.0.8",
     "mongoose": "3.8.22",
     "morgan": "~1.6.1",
     "multer": "^1.1.0",
     "node-xlsx": "^0.6.0",
     "passport": "^0.3.2",
     "passport-local": "^1.0.0",
+    "save-svg-as-png": "^1.0.2",
     "serve-favicon": "~2.3.0",
     "tingodb": "^0.4.2",
     "tungus": "0.0.5"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0"
   }
 }

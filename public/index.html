@@ -25,6 +25,19 @@
     <link href="assets/css/animate.css" rel="stylesheet">
     <link id="loadBefore" href="assets/css/style.css" rel="stylesheet">
 
+<style type="text/css">
+  .box2 {
+    display: inline-block;
+    width: 200px;
+  };
+
+  .my-modal-popup {     
+    width: 500px;
+  };
+
+</style>
+
+
 </head>
 
 <!-- ControllerAs syntax -->
@@ -62,9 +75,9 @@
 <script src="assets/js/bootstrap/ui-bootstrap-tpls-0.12.0.min.js"></script>
 <script src="assets/js/plugins/angular-idle/angular-idle.js"></script>
 
+<!-- pouchdb-->
+
 <!-- Custom Modules -->
-
-
 
 <!--
  You need to include this script on any page that has a Google Map.
@@ -84,6 +97,17 @@
 <!-- Projects Factory -->
 <script src="shared/projects/ProjectsModule.js"></script>
 <script src="shared/projects/projectsFactory.js"></script>
+
+<!-- VizModule -->
+<script src="components/viz/angular-chosen.js"></script>
+<script src="components/viz/vizModule.js"></script>
+<script src="components/viz/dataFactory.js"></script>
+<script src="components/viz/visualisationController.js"></script>
+<script src="components/viz/chosenController.js"></script>
+
+<script src="components/viz/viewSettings/settingsController.js"></script>
+<script src="components/viz/styleSettings/styleController.js"></script>
+<script src="components/viz/styleSettings/downloadController.js"></script>
 
 <!-- Main -->
 <script src="app.module.js"></script>

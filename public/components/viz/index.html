@@ -1,0 +1,29 @@
+<div class="row wrapper border-bottom white-bg page-heading" style="
+    padding-bottom: 5px;
+    padding-top: 10px; width:100%; z-index:1000; position:absolute;">
+    <div class="col-sm-4">
+        	<div ng-controller="chosenCtrl" style="width:300px;">
+		<select chosen data-placeholder="Выбор проекта" ng-model="recipients" ng-options="recipient.name for recipient in recipientsList" ng-change="update()">
+		</select>
+	</div>
+    </div>
+
+    <div class="col-sm-4">
+        <ol class="breadcrumb breadcrumb-mode">
+            
+        </ol>
+    </div>
+
+    <div class="col-sm-4" ng-controller="downloadCtrl">
+        <button ng-click="downloadSVG()"> Скачать SVG</button>
+    </div>
+
+</div>
+
+
+<div style="position:absolute; top:0px;left:0px;bottom:0;right:0; width: 100%; overflow:hidden;">
+	
+    <div ng-controller="visualisationCtrl" class="vis" style = "height:100vh; overflow:hidden"></div>
+	
+</div>
+

@@ -1,0 +1,172 @@
+<style type="text/css">
+  .box2 {
+    display: inline-block;
+    width: 200px;
+  };
+
+  .my-modal-popup {     
+    width: 500px;
+  };
+
+
+</style>
+
+<div class="modal-header">
+    <button type="button" class="close" ng-click="close(false)" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h4 class="modal-title">Настройки отображения</h4>
+</div>
+<div class="modal-body">
+  <div class="wrapper wrapper-content animated fadeInRight ecommerce">
+
+      <div class="row">
+          <div class="col-lg-12">
+
+              <div class = "box2">
+                    <h4>Отображать</h4>
+                    <div class="choices-box">
+                      <div class="checkbox">
+                          <label>
+                              <input data="ТК" type="checkbox" class="selector-type" value="" checked>
+                              TK
+                          </label>
+                      </div>
+                      <div class="checkbox">
+                          <label>
+                              <input data="Стартап" type="checkbox" class="selector-type" value="" checked>
+                              Стартап
+                          </label>
+                      </div>
+                      <div class="checkbox">
+                          <label>
+                              <input data="Инкубатор" type="checkbox" class="selector-type" value="" checked>
+                              Инкубатор
+                          </label>
+                      </div>
+                      <div class="checkbox">
+                          <label>
+                              <input data="Сервиснаякомпания" type="checkbox" class="selector-type" value="" checked>
+                              Сервисная компания
+                          </label>
+                      </div>
+                      <div class="checkbox">
+                          <label>
+                              <input data="Внутреннийrd" type="checkbox" class="selector-type" value="" checked>
+                              Внутренний r&d
+                          </label>
+                      </div>
+                      <div class="checkbox">
+                          <label>
+                              <input data="ЗОКР" type="checkbox" class="selector-type" value="" checked>
+                              ЗОКР
+                          </label>
+                      </div>
+                      <div class="checkbox">
+                          <label>
+                              <input data="Интеллектуальнаясобственность" type="checkbox" class="selector-type" value="" checked>
+                              Интеллектуальная собственность
+                          </label>
+                      </div>
+                    </div>
+                    <h4>Отображать статус</h4>
+                    <div class="choices-box">
+                      <div class="checkbox" value="">
+                          <label>
+                              <input data="Всеок Естьпроблемы Требуетвмешательства" type="checkbox" class="selector-status" value="" checked>
+                              Активные проекты
+                          </label>
+                      </div>
+                      <div class="checkbox" value="">
+                          <label>
+                              <input data="Впроработке" type="checkbox" class="selector-status" value="" checked>
+                              Проекты в проработке
+                          </label>
+                      </div>
+                      <div class="checkbox" value="">
+                          <label>
+                              <input data="Полка" type="checkbox" class="selector-status" value="" checked>
+                              Проекты на полке
+                          </label>
+                      </div>
+                    </div>
+                  </div>
+                <div class="box2">
+                    <h4>Выводить в подпись</h4>
+                    <div class="choices-box">
+                      <div class="checkbox" value="">
+                          <label>
+                              <input data="Процент" type="checkbox" class="selector-text" value="">
+                              Процент
+                          </label>
+                      </div>
+                      <div class="checkbox" value="">
+                          <label>
+                              <input data="Сумма" type="checkbox" class="selector-text" value="">
+                              Сумму
+                          </label>
+                      </div>
+                    </div>
+
+                    <h4>Визуализируем</h4>
+                    <div class="choices-box">
+                      <div>
+                          <label>
+                              <input type="radio" name="optionsRadios1" id="shares" class="shares-mode" value="Доли" checked>
+                              Доли
+                          </label>
+                      </div>
+                      <div>
+                          <label>
+                              <input type="radio" name="optionsRadios1" id="money" class="shares-mode" value="Деньги" checked>
+                              Деньги
+                          </label>
+                      </div>
+                      <div>
+                          <label>
+                              <input type="radio" name="optionsRadios1" id="capexopex" class="shares-mode" value="CapexOpex" checked>
+                              Capex/Opex
+                          </label>
+                      </div>
+                      <div>
+                       <label>
+                          <input type="radio" name="optionsRadios1" id="types" class="shares-mode" value="ТипыПроектов" checked>
+                          Типы проектов
+                        </label>
+                      </div>
+                    </div>
+                    <h4>Размер узла</h4>
+                    <div class="choices-box">
+                      <div>
+                          <label>
+                            <input type="radio" name="optionsRadios2"  value="2" class="layout-mode" checked>
+                            Пропорционален инвестициям
+                          </label>
+                      </div>
+                      <div>
+                         <label>
+                            <input type="radio" name="optionsRadios2"  value="1"  class="layout-mode" checked>
+                            ТК больше
+                         </label>
+                      </div>
+                    </div>
+
+                    <h4>Отображать звезды</h4>
+                    <div class="choices-box">
+                      <div class="checkbox" value="">
+                          <label>
+                              <input data="ОтображатьЗвезды" type="checkbox" class="selector-star" value="">
+                              Отображать
+                          </label>
+                      </div>
+                    </div>
+                </div>  
+
+          </div>
+        </div>
+    </div>
+
+  </div>
+
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-primary" ng-click="submit()"> Обновить представление </button>
+</div>

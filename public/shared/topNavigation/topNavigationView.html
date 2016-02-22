@@ -12,21 +12,11 @@
                 <li class="dropdown" dropdown>
                     <a href="#/content/update" class="dropdown-toggle" > Обновление </a>
                 </li>
-                <li class="dropdown" dropdown>
-                    <a class="dropdown-toggle" href dropdown-toggle> Режим просмотра <span class="caret"></span></a>
-                    <ul role="menu" class="dropdown-menu">
-                        <li><a href="#">Menu item</a></li>
-                        <li><a href="#">Menu item</a></li>
-                        <li><a href="#">Menu item</a></li>
-                        <li><a href="#">Menu item</a></li>
-                    </ul>
+                <li ng-controller="settingsCtrl" ng-click="open()">
+                    <a class="dropdown-toggle" > Режим просмотра </a>
                 </li>
-                <li class="dropdown" dropdown>
-                    <a class="dropdown-toggle" href dropdown-toggle> Настройки <span class="caret"></span></a>
-                    <ul role="menu" class="dropdown-menu">
-                        <li><a href="#">Цветовая схема</a></li>
-
-                    </ul>
+                <li ng-controller="styleCtrl" ng-click="open()">
+                    <a class="dropdown-toggle" > Настройки </a>
                 </li>
 
             </ul>

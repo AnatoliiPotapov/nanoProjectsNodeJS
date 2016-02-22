@@ -9,8 +9,10 @@
         'ui.router',
         'oc.lazyLoad',
         'ui.bootstrap',
+        'angular.chosen',
         'Auth',
-        'Projects'
+        'Projects',
+        'vizModule'
     ]);
 
     /**
